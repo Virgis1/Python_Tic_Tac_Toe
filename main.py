@@ -122,8 +122,6 @@ def player1_move():
             if player1_win:
                 print(f'\nplayer1 win')
                 return True
-        case _:
-            print("Neteisingai pasirinktas veiksmas")
 
 def player2_move():
     match player2:
@@ -190,25 +188,23 @@ def player2_move():
             if player2_win:
                 print(f'\nplayer2 win')
                 return True
-        case _:
-            print("Neteisingai pasirinktas veiksmas")
 
 showTable()
 
 while True:
-    player1 = input(f'\nZaidejas1 pasirinkite laukeli, i kuri deti "X" ')
+    player1 = input(f'\nPasirinkite laukeli, i kuri deti "X" ')
     player1_move()
     count += 1
     if player1_win or player2_win:
         break
     elif count == 9:
-        print('\nlygiosios')
+        print('lygiosios')
         break
-    player2 = input(f'\nZaidejas2 pasirinkite laukeli, i kuri deti "0" ')
+    player2 = input(f'\nPasirinkite laukeli, i kuri deti "0" ')
     player2_move()
     count += 1
     if player1_win or player2_win:
         break
     elif count == 9:
-        print(f'\nlygiosios')
+        print('lygiosios')
         break
